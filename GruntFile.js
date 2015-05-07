@@ -1,6 +1,19 @@
 module.exports = function(grunt)
 {
   grunt.initConfig({
+    jade: {
+      debug: {
+        options: {
+          data: {
+            debug: true,
+            timestamp: "<%= grunt.template.today() %>"
+          }
+        },
+        files: {
+          "dist/index.html": "index.jade"
+        },
+      },
+    },
     sass: {
       dist: {
         files: [{
@@ -14,6 +27,10 @@ module.exports = function(grunt)
     concat: {
       options: {
         separator: ';',
+      },
+      js: {
+        src: ['index.jade'],
+        dest: 'dist/index.html',
       },
       js: {
         src: ['js/**/*.js'],
@@ -41,5 +58,5 @@ module.exports = function(grunt)
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.registerTask('default', ['sass', 'concat', 'watch']);
+  grunt.registerTask('default', ['jade', 'sass', 'concat', 'watch']);
 }
