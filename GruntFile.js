@@ -58,6 +58,10 @@ module.exports = function(grunt)
         dest: 'dist/css/style.css',
       },
     },
+    jshint: {
+      beforeconcat: ['js/**/*.js'],
+      afterconcat: ['dist/js/built.js']
+    },
     watch: {
       jade: {
         files: ['index.jade'],
@@ -65,7 +69,7 @@ module.exports = function(grunt)
       },
       js: {
         files: ['js/**/*.js'],
-        tasks: ['concat:js'],
+        tasks: ['jshint', 'concat:js'],
       },
       css: {
         files: ['css/**/*.css'],
@@ -78,7 +82,8 @@ module.exports = function(grunt)
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.registerTask('default', ['imagemin', 'jade', 'sass', 'concat', 'watch']);
+  grunt.registerTask('default', ['imagemin', 'jade', 'sass', 'jshint', 'concat', 'watch']);
 }
