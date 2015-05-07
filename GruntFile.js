@@ -50,10 +50,6 @@ module.exports = function(grunt)
         separator: ';',
       },
       js: {
-        src: ['index.jade'],
-        dest: 'dist/index.html',
-      },
-      js: {
         src: ['js/**/*.js'],
         dest: 'dist/js/built.js',
       },
@@ -63,6 +59,10 @@ module.exports = function(grunt)
       },
     },
     watch: {
+      jade: {
+        files: ['index.jade'],
+        tasks: ['jade'],
+      },
       js: {
         files: ['js/**/*.js'],
         tasks: ['concat:js'],
