@@ -18,5 +18,9 @@
   "homepage": "https://github.com/rahulnadella/parallex_example",
   "dependencies": {
     "grunt": "^0.4.5"
+  },
+  "devDependencies": {
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-watch": "^0.6.1"
   }
 }
