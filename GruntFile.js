@@ -45,6 +45,9 @@ module.exports = function(grunt)
         }],
       },
     },
+    jshint: {
+      all: ['js/**/*.js']
+    },
     concat: {
       options: {
         separator: ';',
@@ -58,9 +61,17 @@ module.exports = function(grunt)
         dest: 'dist/css/style.css',
       },
     },
-    jshint: {
-      beforeconcat: ['js/**/*.js'],
-      afterconcat: ['dist/js/built.js']
+    uglify: {
+      options: {
+        mangle: {
+          except: ['jQuery', 'Backbone']
+        }
+      },
+      my_target: {
+        files: {
+          'dist/js/built.js': ['js/**/*.js']
+        }
+      },
     },
     watch: {
       jade: {
@@ -84,6 +95,7 @@ module.exports = function(grunt)
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.registerTask('default', ['imagemin', 'jade', 'sass', 'jshint', 'concat', 'watch']);
+  grunt.registerTask('default', ['imagemin', 'jade', 'sass', 'jshint', 'concat', 'uglify', 'watch']);
 }
