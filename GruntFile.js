@@ -1,6 +1,16 @@
 module.exports = function(grunt)
 {
   grunt.initConfig({
+    sass: {
+      dist: {
+        files: [{
+          expand: true,
+          src: ['css/**/*.scss', 'css/**/*.sass'],
+          dest: 'dist',
+          ext: '.css'
+        }],
+      },
+    },
     concat: {
       options: {
         separator: ';',
@@ -27,7 +37,8 @@ module.exports = function(grunt)
   });
 
 
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.registerTask('default', ['concat', 'watch']);
+  grunt.registerTask('default', ['sass', 'concat', 'watch']);
 }
