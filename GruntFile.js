@@ -73,6 +73,16 @@ module.exports = function(grunt)
         }
       },
     },
+    cssmin: {
+      target: {
+        files: [{
+          expand: true,
+          src: ['css/**/*.css'],
+          dest: 'dist',
+          ext: '.min.css'
+        }]
+      },
+    },
     watch: {
       jade: {
         files: ['index.jade'],
@@ -96,6 +106,7 @@ module.exports = function(grunt)
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.registerTask('default', ['imagemin', 'jade', 'sass', 'jshint', 'concat', 'uglify', 'watch']);
+  grunt.registerTask('default', ['imagemin', 'jade', 'sass', 'jshint', 'concat', 'uglify', 'cssmin', 'watch']);
 }
