@@ -1,20 +1,88 @@
 doctype html
 html(lang="en")
   head
-    title= pageTitle
-    script(type='text/javascript').
-      if (foo) {
-         bar(1 + 5)
-      }
+    meta(charset="utf-8")
+    title BlackBird Co.
+    meta(name="description", content="")
+    meta(name="author", content="")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="css/style.css")
+    link(rel="icon", type="image/png", href="images/favicon.png")
+  
   body
-    h1 Jade - node template engine
-    #container.col
-      if youAreUsingJade
-        p You are amazing
-      else
-        p Get on it!
-      p.
-        Jade is a terse and simple
-        templating language with a
-        strong focus on performance
-        and powerful features.
+    
+    header.bird-box
+      .back-bird
+      .logo
+      .fore-bird
+      
+    
+    section.content
+      
+      article
+        
+        h1 Clothing Store
+        
+        hr
+        
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.
+        
+        hr
+
+        .clothes-pics
+
+          .row.img-row
+            figure.columns.four
+              img(src="/images/model1.jpg")
+              figcaption BlackBird Sweater - <strong>$135</strong>
+            
+            figure.columns.four
+              img(src="/images/model2.jpg")
+              figcaption BlackBird Trousers - <strong>$135</strong>
+              
+            figure.columns.four
+              img(src="/images/model3.jpg")
+              figcaption BlackBird Jacket - <strong>$135</strong>
+              
+          .row.img-row
+            figure.columns.four
+              img(src="/images/model2.jpg")
+              figcaption BlackBird Trousers - <strong>$135</strong>
+              
+            figure.columns.four
+              img(src="/images/model3.jpg")
+              figcaption BlackBird Jacket - <strong>$135</strong>
+              
+            figure.columns.four
+              img(src="/images/model1.jpg")
+              figcaption BlackBird Sweater - <strong>$135</strong>
+          
+          .row.img-row
+            figure.columns.four
+              img(src="/images/model3.jpg")
+              figcaption BlackBird Jacket - <strong>$135</strong>
+            
+            figure.columns.four
+              img(src="/images/model1.jpg")
+              figcaption BlackBird Sweater - <strong>$135</strong>
+            
+            figure.columns.four
+              img(src="/images/model2.jpg")
+              figcaption BlackBird Trousers - <strong>$135</strong>
+                
+        
+        h1 Clothing Store
+        
+        hr
+        
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.
+        
+        hr
+        
+        .large-window
+        
+        
+      div(style="height: 2000px")
+
+    script(src="/js/jquery-2.1.3.min.js")
+    script(src="/js/functions.js")
