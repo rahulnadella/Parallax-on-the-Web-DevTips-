@@ -58,6 +58,10 @@ module.exports = function(grunt)
         src: ['js/**/*.js'],
         dest: 'public/js/functions.js',
       },
+      css: {
+        src: ['public/css/**/*.css'],
+        dest: 'public/css/style.css',
+      },
     },
     uglify: {
       options: {
@@ -83,9 +87,13 @@ module.exports = function(grunt)
         files: ['js/**/*.js'],
         tasks: ['jshint', 'concat:js'],
       },
-      css: {
+      sass: {
         files: ['css/**/*.scss', 'css/**/*.sass'],
         tasks: ['sass'],
+      },
+      css: {
+        files: ['public/css/**/*.css'],
+        tasks: ['concat:css'],
       },
       files:['public/**','server/**'],
       tasks:[],
