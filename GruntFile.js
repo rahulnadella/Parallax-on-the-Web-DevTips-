@@ -3,6 +3,8 @@ module.exports = function(grunt)
   var mozjpeg = require('imagemin-mozjpeg');
 
   grunt.initConfig({
+    pkg:grunt.file.readJSON('package.json'),
+
     imagemin: {
       static:  {
         options: {
@@ -11,14 +13,14 @@ module.exports = function(grunt)
           use: [mozjpeg()]
         },
         files: {
-          'dist/images/black-bird-logo.svg': 'images/black-bird-logo.svg'
+          'public/images/black-bird-logo.svg': 'images/black-bird-logo.svg'
         }
       },
       dynamic: {
         files: [{
           expand: true,
           src: ['images/**/*.{png,jpg,gif}'],
-          dest: 'dist'
+          dest: 'public'
         }]
       },
     },
@@ -31,16 +33,16 @@ module.exports = function(grunt)
           }
         },
         files: {
-          "dist/index.html": "index.jade"
+          "public/index.html": "index.jade"
         },
       },
     },
     sass: {
-      dist: {
+      public: {
         files: [{
           expand: true,
           src: ['css/**/*.scss', 'css/**/*.sass'],
-          dest: 'dist',
+          dest: 'public',
           ext: '.css'
         }],
       },
@@ -54,36 +56,25 @@ module.exports = function(grunt)
       },
       js: {
         src: ['js/**/*.js'],
-        dest: 'dist/js/built.js',
-      },
-      css: {
-        src: ['css/**/*.css'],
-        dest: 'dist/css/style.css',
+        dest: 'public/js/functions.js',
       },
     },
     uglify: {
       options: {
         mangle: {
-          except: ['jQuery', 'Backbone']
+          except: ['jQuery']
         }
       },
       my_target: {
         files: {
-          'dist/js/built.js': ['js/**/*.js']
+          'public/js/functions.js': ['js/**/*.js']
         }
       },
     },
-    cssmin: {
-      target: {
-        files: [{
-          expand: true,
-          src: ['css/**/*.css'],
-          dest: 'dist',
-          ext: '.min.css'
-        }]
-      },
-    },
     watch: {
+      options: {
+        livereload: true,
+      },
       jade: {
         files: ['index.jade'],
         tasks: ['jade'],
@@ -93,9 +84,22 @@ module.exports = function(grunt)
         tasks: ['jshint', 'concat:js'],
       },
       css: {
-        files: ['css/**/*.css'],
-        tasks: ['concat:css'],
+        files: ['css/**/*.scss', 'css/**/*.sass'],
+        tasks: ['sass'],
       },
+      files:['public/**','server/**'],
+      tasks:[],
+    },
+
+    express:{
+        all:{
+            options:{
+                server:'server.js',
+                hostname:'localhost',
+                bases:['./public'],
+                livereload:true
+            }
+        },
     },
   });
 
@@ -108,5 +112,8 @@ module.exports = function(grunt)
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.registerTask('default', ['imagemin', 'jade', 'sass', 'jshint', 'concat', 'uglify', 'cssmin', 'watch']);
+  grunt.loadNpmTasks('grunt-express-middleware');
+  grunt.loadNpmTasks('grunt-open');
+  grunt.registerTask('default', ['imagemin', 'jade', 'sass', 'jshint', 'concat', 'uglify']);
+  grunt.registerTask('server',['default', 'express', 'watch']);
 }
