@@ -6,8 +6,11 @@ An example implementation taken from the video series done by [Travis Neilson](h
 
 This project is an example implementation of the [Parallex on the Web](https://github.com/DevTips/Parallax-on-the-Web-DevTips-) done by [Travis Neilson](https://github.com/travisneilson). I have modified the code to be used in my development enviorment.
 
->Modules
+>Modules (Required)
+->Node.js, NPM, Grunt-Cli Ruby, Sass
 
+>Modules (Grunt)
+->Grunt, Grunt-Contrib-Concat, Grunt-Contrib-Imagemin, Grunt-Contrib-Jade, Grunt-Contrib-Jshint, Grunt-Contrib-Sass, Grunt-Contrib-Uglify, Grunt-Contrib-Watch, Grunt-Express, Body-Parser, Imagemin-mozjpeg, Method-Override, Mongoose, Mozjpeg
 
 ###Usage
 
