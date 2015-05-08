@@ -30,8 +30,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // override with the X-HTTP-Method-Override header in the request. simulate DELETE/PUT
 app.use(methodOverride('X-HTTP-Method-Override'));
 
-//set the public folder of the app
-app.use(express.static(__dirname + '/public'));
+//set the dist folder of the app
+app.use(express.static(__dirname + '/dist'));
 
 //load basic route for server
 require('./server/routes/basic')(app);

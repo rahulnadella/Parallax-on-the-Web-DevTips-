@@ -5,9 +5,8 @@ var path = require('path');
        // basic routes to handle request
         app.get('/', function(req, res) {
                 console.log("Main route");
-                res.sendFile(path.join(__dirname, '../../public', 'index.html'));
+                res.sendFile(path.join(__dirname, '../../dist', 'index.html'));
 
         });
 
     };
-

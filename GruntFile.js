@@ -13,14 +13,14 @@ module.exports = function(grunt)
           use: [mozjpeg()]
         },
         files: {
-          'public/images/black-bird-logo.svg': 'images/black-bird-logo.svg'
+          'dist/images/black-bird-logo.svg': 'images/black-bird-logo.svg'
         }
       },
       dynamic: {
         files: [{
           expand: true,
           src: ['images/**/*.{png,jpg,gif}'],
-          dest: 'public'
+          dest: 'dist'
         }]
       },
     },
@@ -33,7 +33,7 @@ module.exports = function(grunt)
           }
         },
         files: {
-          "public/index.html": "index.jade"
+          "dist/index.html": "index.jade"
         },
       },
     },
@@ -42,7 +42,7 @@ module.exports = function(grunt)
         files: [{
           expand: true,
           src: ['css/**/*.scss', 'css/**/*.sass'],
-          dest: 'public',
+          dest: 'dist',
           ext: '.css'
         }],
       },
@@ -56,11 +56,11 @@ module.exports = function(grunt)
       },
       js: {
         src: ['js/**/*.js'],
-        dest: 'public/js/functions.js',
+        dest: 'dist/js/functions.js',
       },
       css: {
-        src: ['public/css/**/*.css'],
-        dest: 'public/css/style.css',
+        src: ['dist/css/**/*.css'],
+        dest: 'dist/css/style.css',
       },
     },
     uglify: {
@@ -71,7 +71,7 @@ module.exports = function(grunt)
       },
       my_target: {
         files: {
-          'public/js/functions.js': ['js/**/*.js']
+          'dist/js/functions.js': ['js/**/*.js']
         }
       },
     },
@@ -92,10 +92,10 @@ module.exports = function(grunt)
         tasks: ['sass'],
       },
       css: {
-        files: ['public/css/**/*.css'],
+        files: ['dist/css/**/*.css'],
         tasks: ['concat:css'],
       },
-      files:['public/**','server/**'],
+      files:['dist/**','server/**'],
       tasks:[],
     },
 
@@ -104,7 +104,7 @@ module.exports = function(grunt)
             options:{
                 server:'server.js',
                 hostname:'localhost',
-                bases:['./public'],
+                bases:['./dist'],
                 livereload:true
             }
         },
