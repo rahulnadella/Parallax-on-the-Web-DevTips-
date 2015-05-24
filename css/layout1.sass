@@ -11,6 +11,11 @@ figure
   margin: auto
 
 .content
+  position: relative
+  z-index: 2
+  background: white
+  margin-bottom: 400px
+
   article
     padding: 100px 0
     max-width: 640px
@@ -19,8 +24,6 @@ figure
 
 img
   max-width: 100%
-
-
 
 // Parallax
 
@@ -110,8 +113,6 @@ img
     font-size: 11px
     transition: all 0.3s ease-in-out
 
-
-
 // large-window
 
 .large-window
@@ -189,3 +190,23 @@ img
 
   .post-3
     transform: translate(-100px, 20px)
+
+//footer
+
+footer
+  background: black
+  color: white
+  padding: 40px 0
+  position: fixed
+  bottom: 0
+  width: 100%
+
+  .footer-stuff
+    max-width: 640px
+    margin: 0 auto
+
+  a
+    color: white
+
+  input
+    color: #666
