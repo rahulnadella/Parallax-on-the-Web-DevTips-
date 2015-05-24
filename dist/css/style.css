@@ -22,11 +22,16 @@ h1 {
 figure {
   margin: auto; }
 
-.content article {
-  padding: 100px 0;
-  max-width: 640px;
-  margin: 0 auto;
-  text-align: center; }
+.content {
+  position: relative;
+  z-index: 2;
+  background: white;
+  margin-bottom: 400px; }
+  .content article {
+    padding: 100px 0;
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center; }
 
 img {
   max-width: 100%; }
@@ -161,6 +166,21 @@ img {
     z-index: 2; }
   .blog-posts .post-3 {
     transform: translate(-100px, 20px); }
+
+footer {
+  background: black;
+  color: white;
+  padding: 40px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%; }
+  footer .footer-stuff {
+    max-width: 640px;
+    margin: 0 auto; }
+  footer a {
+    color: white; }
+  footer input {
+    color: #666; }
 
 /*# sourceMappingURL=layout1.css.map */
 ;/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -1892,11 +1912,16 @@ h1 {
 figure {
   margin: auto; }
 
-.content article {
-  padding: 100px 0;
-  max-width: 640px;
-  margin: 0 auto;
-  text-align: center; }
+.content {
+  position: relative;
+  z-index: 2;
+  background: white;
+  margin-bottom: 400px; }
+  .content article {
+    padding: 100px 0;
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center; }
 
 img {
   max-width: 100%; }
@@ -2031,5 +2056,20 @@ img {
     z-index: 2; }
   .blog-posts .post-3 {
     transform: translate(-100px, 20px); }
+
+footer {
+  background: black;
+  color: white;
+  padding: 40px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%; }
+  footer .footer-stuff {
+    max-width: 640px;
+    margin: 0 auto; }
+  footer a {
+    color: white; }
+  footer input {
+    color: #666; }
 
 /*# sourceMappingURL=style.css.map */
