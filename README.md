@@ -1,6 +1,6 @@
 # Parallex Example
 
-The parallax example website taken from the video series done by [Travis Neilson](https://www.youtube.com/playlist?list=PLqGj3iMvMa4IyCbhul-PdeiDqmh4ooJzk) built using Grunt.
+The complete parallax example (Video 2-8) taken from the video series done by [Travis Neilson](https://www.youtube.com/playlist?list=PLqGj3iMvMa4IyCbhul-PdeiDqmh4ooJzk) built using Grunt.
 
 ###Overview
 
