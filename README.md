@@ -55,6 +55,11 @@ Below is the listed output of running `grunt server`:
     Running "watch" task
     Waiting...
 
+###Output
+
+**Parallax Website Output**
+
+<img src="https://github.com/rahulnadella/Parallax-on-the-Web-DevTips-/blob/master/assets/parallex_website.gif" alt="Black Bird Clothing" width="800" height="600" />
 
 ###License
 
