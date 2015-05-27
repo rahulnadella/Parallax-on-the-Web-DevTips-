@@ -11,12 +11,17 @@ This project is an example implementation of the [Parallex on the Web](https://g
 *All modules below must be installed before deploying the project.*
 
 >Modules (Install globally)
-->Node.js, NPM, Grunt-Cli Ruby, Sass
+->Node.js, NPM, Grunt-Cli, Ruby, Sass
 
 >Modules (Grunt)
 ->Grunt, Grunt-Contrib-Concat, Grunt-Contrib-Imagemin, Grunt-Contrib-Jade, Grunt-Contrib-Jshint, Grunt-Contrib-Sass, Grunt-Contrib-Uglify, Grunt-Contrib-Watch, Grunt-Express, Body-Parser, Imagemin-mozjpeg, Method-Override, Mongoose, Mozjpeg
 
 ###Usage
+
+Following commands will install the project (in your working directory) using the terminal application:
+
+`$ git clone https://github.com/rahulnadella/Parallax-on-the-Web-DevTips-.git` <br/>
+`$ npm install`<br/>
 
 After installing the software modules listed above you will have to run `grunt server` in a terminal prompt.
 
