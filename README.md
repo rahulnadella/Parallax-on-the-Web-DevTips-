@@ -18,10 +18,10 @@ This project is an example implementation of the [Parallex on the Web](https://g
 
 ###Usage
 
-Following commands will install the project in your working directory:
+Following commands will install the project (in your working directory) using the terminal application:
 
-`git clone https://github.com/rahulnadella/Parallax-on-the-Web-DevTips-.git` <br/>
-`npm install`<br/>
+`$ git clone https://github.com/rahulnadella/Parallax-on-the-Web-DevTips-.git` <br/>
+`$ npm install`<br/>
 
 After installing the software modules listed above you will have to run `grunt server` in a terminal prompt.
 
