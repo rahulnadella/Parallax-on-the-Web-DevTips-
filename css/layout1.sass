@@ -12,9 +12,9 @@ figure
 
 .content
   position: relative
-  z-index: 2
   background: white
   margin-bottom: 400px
+  overflow: hidden
 
   article
     padding: 100px 0
@@ -25,13 +25,16 @@ figure
 img
   max-width: 100%
 
+
+
+
 // Parallax
 
 .bird-box
   position: relative
   height: 600px
   background:
-    image: url(/images/bird-bg.jpg)
+    image: url(../images/bird-bg.jpg)
     size: auto 600px
     position: top center
     attachment: fixed
@@ -41,7 +44,7 @@ img
   height: 100px
   width: 100%
   background:
-    image: url(/images/black-bird-logo.svg)
+    image: url(../images/black-bird-logo.svg)
     position: center
     repeat: no-repeat
   position: absolute
@@ -52,7 +55,7 @@ img
   width: 960px
   height: 733px
   background:
-    image: url(/images/fore-bird.png)
+    image: url(../images/fore-bird.png)
     repeat: no-repeat
     position: right bottom
   position: absolute
@@ -64,7 +67,7 @@ img
   width: 960px
   height: 298px
   background:
-    image: url(/images/back-bird.png)
+    image: url(../images/back-bird.png)
     repeat: no-repeat
     position: top left
   position: absolute
@@ -82,8 +85,8 @@ img
     margin-bottom: 20px
     position: relative
     opacity: 0
-    transform: translateX(20px)
-    transition: all 0.3s ease-in-out
+    transform: translateX(30px)
+    transition: all 0.4s ease-in-out
     overflow: hidden
     cursor: pointer
 
@@ -113,12 +116,14 @@ img
     font-size: 11px
     transition: all 0.3s ease-in-out
 
+
+
 // large-window
 
 .large-window
   height: 640px
   background:
-    image: url(/images/model2.jpg)
+    image: url(../images/model2.jpg)
     position: center 0px
     repeat: repeat-y
     attachment: fixed
@@ -191,6 +196,7 @@ img
   .post-3
     transform: translate(-100px, 20px)
 
+
 //footer
 
 footer
@@ -200,6 +206,7 @@ footer
   position: fixed
   bottom: 0
   width: 100%
+  z-index: -1
 
   .footer-stuff
     max-width: 640px
