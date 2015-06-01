@@ -64,7 +64,7 @@ Below is the listed output of running `grunt server`:
 
 **Black Bird Clothing** *(Parallax Website Output)*
 
-<img src="https://github.com/rahulnadella/Parallax-on-the-Web-DevTips-/blob/master/assets/parallax_website_quadratic.gif" alt="Black Bird Clothing" width="800" height="600" />
+<img src="https://github.com/rahulnadella/Parallax-on-the-Web-DevTips-/blob/Post-easing-function/assets/parallax_website_quadratic.gif" alt="Black Bird Clothing" width="800" height="600" />
 
 ###License
 
