@@ -38,3 +38,6 @@ Thumbs.db
 
 # SASS generated files #
 .sass-cache/*
+
+# node_modules #
+node_modules
